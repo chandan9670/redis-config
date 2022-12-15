@@ -1,0 +1,18 @@
+redis config application should be running.
+
+redis should be installed locally i.e. sudo apt-get install redis
+check command -> redis-cli
+checking command for server up -> ping then it will show pong. 
+
+to set password -> set config ""
+
+redis dependencies should be added in pom(in that service in which redis is used).
+<dependency>
+    <groupId>com.tech</groupId>
+	<artifactId>redis</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+</dependency>
+
+the service which is using the redis can publish the message event.
+
+the service which wants to use that redis contained service can subscribe to that service in order to use it..
